@@ -30,6 +30,27 @@ def TestStationaryAdfuller(ts, cutoff = 0.01):
     else:
         print("Weak evidence against null hypothesis, time series has a unit root, indicating it is non-stationary ")
 ```
+This function will return one of the above two statement which will represent whether the time-series is staionary or not.
+
+## Arima
+
+```python
+mod = sm.tsa.statespace.SARIMAX(train_data,
+                                order=SARIMAX_model[AIC.index(min(AIC))][0],
+                                seasonal_order=SARIMAX_model[AIC.index(min(AIC))][1],
+                                enforce_stationarity=False,
+                                enforce_invertibility=False)
+
+results = mod.fit()
+```
+Above one can see the script to fit `SARIMA` model after getting best parameter through `AIC`
+
+```python
+plt.style.use('ggplot')
+results.plot_diagnostics(figsize=(15, 10))
+plt.savefig('Arima1.jpg')
+plt.show()
+```
 ![alt text](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/Arima1.jpg)
 
 In the plots above, we can observe that the residuals are uncorrelated (bottom right plot) and do not exhibit any obvious seasonality (the top left plot). Also, the residuals and roughly normally distributed with zero mean (top right plot). The qq-plot on the bottom left shows that the ordered distribution of residuals (blue dots) roghly follows the linear trend of samples taken from a standard normal distribution with N(0, 1). Again, this is a strong indication that the residuals are normally distributed.
