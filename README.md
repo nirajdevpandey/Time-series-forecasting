@@ -30,4 +30,6 @@ def TestStationaryAdfuller(ts, cutoff = 0.01):
     else:
         print("Weak evidence against null hypothesis, time series has a unit root, indicating it is non-stationary ")
 ```
-![Alt text](C:/Users/Dell/Documents/DDA Lab/Exercise-05/Arima1.jpg,raw=true "Title")
+![alt text](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/Arima1.jpg)
+
+In the plots above, we can observe that the residuals are uncorrelated (bottom right plot) and do not exhibit any obvious seasonality (the top left plot). Also, the residuals and roughly normally distributed with zero mean (top right plot). The qq-plot on the bottom left shows that the ordered distribution of residuals (blue dots) roghly follows the linear trend of samples taken from a standard normal distribution with N(0, 1). Again, this is a strong indication that the residuals are normally distributed.
