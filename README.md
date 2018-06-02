@@ -33,3 +33,7 @@ def TestStationaryAdfuller(ts, cutoff = 0.01):
 ![alt text](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/Arima1.jpg)
 
 In the plots above, we can observe that the residuals are uncorrelated (bottom right plot) and do not exhibit any obvious seasonality (the top left plot). Also, the residuals and roughly normally distributed with zero mean (top right plot). The qq-plot on the bottom left shows that the ordered distribution of residuals (blue dots) roghly follows the linear trend of samples taken from a standard normal distribution with N(0, 1). Again, this is a strong indication that the residuals are normally distributed.
+
+![Arima_prediction](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/prediction.jpg)
+
+Looking at the figure, the model seems to do a pretty good job at modeling the time series. The blue and purple lines are, as expected, very close to the red ground truth. What is more interesting is the gray line, the out of sample predinction. For such a simple time series, the ARIMA model is able to forecast the 1960 values accurately.
