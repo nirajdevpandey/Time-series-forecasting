@@ -16,6 +16,18 @@ A stationary process has the property that the mean, variance and autocorrelatio
 
 For practical purposes, stationarity can usually be determined from a run sequence plot.
 
+### DATA
+The data we are dealing with look as follows 
+![cb](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/original_data.jpg)
+### Trend 
+Let's check the trend in the data 
+![dd](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/trend.jpg)
+
+### Seasonality 
+![dd](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/seasonality.jpg)
+
+
+## checking stationarity
 ```python
 def TestStationaryAdfuller(ts, cutoff = 0.01):
     ts_test = adfuller(ts, autolag = 'AIC')
