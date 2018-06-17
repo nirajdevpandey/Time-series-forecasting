@@ -70,3 +70,5 @@ In the plots above, we can observe that the residuals are uncorrelated (bottom r
 ![Arima_prediction](https://github.com/nirajdevpandey/Time-series-forecasting/blob/master/data/prediction.jpg)
 
 Looking at the figure, the model seems to do a pretty good job at modeling the time series. The blue and purple lines are, as expected, very close to the red ground truth. What is more interesting is the gray line, the out of sample predinction. For such a simple time series, the ARIMA model is able to forecast the 1960 values accurately.
+
+### Thanks a lot
